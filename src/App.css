@@ -1,0 +1,794 @@
+ body{
+  background-color: rgba(1, 1, 24, 0.89) !important;
+ }
+.nav{
+  background-color: rgba(2, 2, 37, 0.974);
+}
+.nav .logo{
+  color: whitesmoke;
+  transition: all 5s;
+  animation: name 3s;
+  font-size: 25px;
+}
+@keyframes name {
+  0%{
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+.nav .logo:hover{
+  color: #0ef;
+}
+.nav .list a{
+  color: whitesmoke;
+  transition: all 5s;
+  font-size: 21px;
+  animation: list 3s;
+}
+.nav .list a:hover{
+  color: #0ef;
+}
+@keyframes list{
+  0%{
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+/* ========== Content CSS ========== */
+
+/* Main container */
+.text {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Text section */
+.txt {
+  max-width: 650px;
+  text-align: center;
+  color: white;
+  flex: 1;
+}
+
+.txt #h3 {
+  font-size: 1.5rem;
+  animation: slideInLeft 1s ease-in-out;
+}
+
+@keyframes slideInLeft {
+  0% { transform: translateX(-50px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+.txt #h2 {
+  font-size: 2rem;
+  animation: slideInRight 1s ease-in-out;
+}
+
+@keyframes slideInRight {
+  0% { transform: translateX(50px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+.txt #p {
+  font-size: 1rem;
+  line-height: 1.5;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Role typing animation */
+.role-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text1 {
+  border-right: 3px solid #0ef;
+  color: #0ef;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 4s steps(20, end) infinite, blink 0.6s step-end infinite;
+}
+
+@keyframes typing {
+  0% { width: 0; }
+  50% { width: 17ch; }
+  100% { width: 0; }
+}
+
+/* Profile image */
+.txt1 img {
+  margin-top: 20%;
+  width: 320px;
+  border-radius: 10%;
+  box-shadow: -2px 0px 10px 6px #0ef;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s;
+}
+
+.txt1 img:hover {
+  cursor: pointer;
+  box-shadow: -2px 0px 10px 6px #fff;
+  transform: scale(1.05);
+}
+
+/* Buttons */
+.button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.txt .btn {
+  background-color: #0ef;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.txt .btn:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 0px 0px 10px 5px #0ef;
+}
+
+/* ✅ RESPONSIVE DESIGN FOR MOBILE */
+@media (max-width: 768px) {
+  .text {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .txt {
+    width: 90%;
+  }
+
+  .role-container {
+    flex-direction: column;
+  }
+
+  .txt1 img {
+    width: 250px;
+    margin-top: 20px;
+  }
+
+  .button-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .txt .btn {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+
+/* ================ about me css ============ */
+
+
+h2 span{
+  color: #0ef !important;
+}
+
+/* Main container */
+.about-container {
+  padding: 50px 20px;
+}
+
+/* Profile image section */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 350px;
+  border-radius: 10%;
+  box-shadow: -2px 0px 10px 6px #0ef;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s;
+}
+
+.profile-pic:hover {
+  cursor: pointer;
+  box-shadow: -2px 0px 10px 6px #fff;
+  transform: scale(1.05);
+}
+
+/* Text section */
+.about_me {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.description {
+  max-width: 560px;
+  text-align: justify;
+  line-height: 1.5;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* Button */
+.btn1 {
+   margin-top: 20px;
+  
+  background-color: #0ef;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.btn1:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 0px 0px 10px 5px #0ef;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+    text-align: center;
+  }
+
+  .profile-pic {
+    width: 350px;
+  }
+
+  .description {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .profile-pic {
+    width: 300px;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* ======= Skills css ======== */
+
+.cantainer-1 h4 {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  color: white;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.cantainer-1 h4:hover {
+  cursor: pointer;
+  color: #0ef;
+}
+
+.cantainer-2 h4 {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  color: white;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.cantainer-2 h4:hover {
+  cursor: pointer;
+  color: #0ef;
+}
+
+.tech-bar {
+  margin-top: 15%;
+}
+
+/* Progress Bar Container */
+.technical {
+  margin-bottom: 15px;
+}
+
+.technical .progress-line {
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: 5px;
+  background-color: #000;
+  overflow: hidden;
+}
+
+/* Progress Bar Animation */
+.technical .progress-line span {
+  height: 100%;
+  background-color: #0ef;
+  position: absolute;
+  border-radius: 10px;
+  width: 0;
+  animation: fillBar 3s ease-in-out forwards;
+}
+
+/* Keyframe Animation for Progress */
+@keyframes fillBar {
+  100% {
+    width: var(--progress-width);
+  }
+}
+
+/* Individual Skill Progress */
+.progress-line .html span { --progress-width: 100%; animation-delay: 0.2s; }
+.progress-line .css span { --progress-width: 80%; animation-delay: 0.4s; }
+.progress-line .bootstrap span { --progress-width: 70%; animation-delay: 0.6s; }
+.progress-line .js span { --progress-width: 60%; animation-delay: 0.8s; }
+.progress-line .node span { --progress-width: 75%; animation-delay: 1s; }
+.progress-line .python span { --progress-width: 50%; animation-delay: 1.2s; }
+.progress-line .django span { --progress-width: 65%; animation-delay: 1.4s; }
+
+.progress-line span::after {
+  content: attr(data-percent);
+  position: absolute;
+  padding: 3px 8px;
+  background-color: #000;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 3px;
+  top: -28px;
+  right: -20;
+  opacity: 0;
+  animation: showText 0.5s 2.5s linear forwards;
+}
+
+.progress-line span::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  top: -10px;
+  right: 0;
+  opacity: 0;
+  animation: showText 0.5s 2.5s linear forwards;
+}
+
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+
+.radial-bars {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-top: 10%;
+}
+
+.radial-bar {
+  margin-top: 10%;
+  margin-left: 5%;
+  width: 45%;
+  height: 170px;
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+.radial-bar svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 120px;
+  height: 160px;
+}
+
+.radial-bar .progress-bar {
+  stroke-width: 10;
+  stroke: black;
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  animation: animate-bar 3s linear forwards;
+}
+
+@keyframes animate-bar {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Circular Progress Animation */
+.path {
+  stroke-width: 10;
+  stroke: #0ef;
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+}
+
+.path-1 { animation: animate-path1 3s linear forwards; }
+.path-2 { animation: animate-path2 3s linear forwards; }
+.path-3 { animation: animate-path3 3s linear forwards; }
+.path-4 { animation: animate-path4 3s linear forwards; }
+
+@keyframes animate-path1 { 100% { stroke-dashoffset: 120; } }
+@keyframes animate-path2 { 100% { stroke-dashoffset: 150; } }
+@keyframes animate-path3 { 100% { stroke-dashoffset: 175; } }
+@keyframes animate-path4 { 100% { stroke-dashoffset: 90; } }
+
+.radial-bar .percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.radial-bar .text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: -20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .cantainer-1 h4, .cantainer-2 h4 {
+    font-size: 18px;
+    margin-top: 5%;
+  }
+
+  .tech-bar {
+    margin-top: 10%;
+  }
+
+  .radial-bar {
+    width: 80%;
+    margin-left: 0;
+    margin-top: 5%;
+  }
+
+  .radial-bar svg {
+    width: 100px;
+    height: 130px;
+  }
+
+  .radial-bar .percentage {
+    font-size: 14px;
+  }
+
+  .radial-bar .text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cantainer-1 h4, .cantainer-2 h4 {
+    font-size: 16px;
+  }
+
+  .tech-bar {
+    margin-top: 10%;
+  }
+
+  .radial-bars {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .radial-bar {
+    width: 70%;
+    margin-top: 5%;
+    margin-left: 0;
+  }
+
+  .radial-bar svg {
+    width: 90px;
+    height: 120px;
+  }
+
+  .radial-bar .percentage {
+    font-size: 12px;
+  }
+
+  .radial-bar .text {
+    font-size: 10px;
+  }
+
+  .technical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .technical h6 {
+    font-size: 12px;
+  }
+}
+
+
+/* ============= project css ========== */
+
+/* Container */
+.card-container-bar1 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Individual Card */
+.card-bar1 {
+  width: 300px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Image Wrapper */
+.image-container {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+  border-radius: 10px;
+}
+
+/* Rotate Image on Hover */
+.card-bar1:hover .image-container img{
+  transform: rotateY(180deg);
+}
+
+/* Text */
+.text-bar1 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: white;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Show text when hovered */
+.card-bar1:hover .text-bar1 {
+  opacity: 1;
+  transform: translateY(0);
+  border-radius: 10px;
+  background-color: black;
+}
+
+
+
+
+
+
+
+/* ========== Contact CSS ============ */
+
+.contact {
+  border: 2px solid white;
+  margin-top: 30px;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-bar {
+  width: 100%;
+  padding: 20px;
+}
+
+.img-bar {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10%;
+  box-shadow: -2px 0px 10px 6px #0ef;
+}
+
+.form {
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.form input, .form textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #0ef;
+  border-radius: 5px;
+  background: black;
+  color: #fff;
+  font-size: 16px;
+}
+
+.form input:hover, .form textarea:hover {
+  border-color: #fff;
+}
+
+textarea {
+  height: 100px;
+}
+
+.btn-1 {
+  background-color: #0ef;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  transition: 0.3s ease;
+
+}
+
+.btn-1:hover {
+  background-color: white ;
+  color: black;
+  box-shadow: 0px 0px 10px 5px #0ef;
+}
+
+.app-bar1 {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.app-bar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  filter: grayscale(100%);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.app-bar img:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contact {
+    padding: 15px;
+  }
+  
+  .img-bar {
+    width: 90%;
+    margin: auto;
+  }
+
+  .form input, .form textarea {
+    width: 90%;
+  }
+  
+  .app-bar1 {
+    gap: 10px;
+  }
+
+  .app-bar img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* =========== Services CSS ============= */
+
+.service-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+/* Individual Card */
+.service-bar1 {
+  width: 300px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Image Wrapper */
+.image-container {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+  border-radius: 10px;
+}
+
+
+/* Text */
+.text-bar1 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: white;
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Show text when hovered */
+.service-bar1:hover .text-bar1 {
+  width: 100%;
+  height: 30%;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 10px;
+  opacity: 1;
+  margin-top:-24%;
+  transform: translateY(0);
+  background-color: black;
+}
+
+
